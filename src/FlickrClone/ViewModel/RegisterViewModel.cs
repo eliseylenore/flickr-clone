@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace FlickrClone.ViewModel
+namespace FlickrClone.ViewModels
 {
     public class RegisterViewModel
     {
