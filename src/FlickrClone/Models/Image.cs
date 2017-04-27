@@ -15,6 +15,8 @@ namespace FlickrClone.Models
         public string Url { get; set; }
         public string Description { get; set; }
         public virtual ICollection<ApplicationUser> TaggedUsers { get; set; }
+        public int TaggedUserId { get; set; }
         public virtual ApplicationUser User { get; set; }
+
     }
 }

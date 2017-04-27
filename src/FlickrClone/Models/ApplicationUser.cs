@@ -8,5 +8,6 @@ namespace FlickrClone.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public virtual ICollection<ApplicationUser> ImagesTaggedIn { get; set; }
     }
 }

@@ -19,6 +19,8 @@
             
                 @Html.ActionLink("Edit This Image", "Edit", new { id = listImage.Id })
                 @Html.ActionLink("Delete", "Delete", new { id = listImage.Id })
+            <p>Tagged users:</p>
+            @foreach (var taggedUser in Model.TaggedUsers)
         }
 </div>
 }
