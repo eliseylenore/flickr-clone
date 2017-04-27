@@ -3,8 +3,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using System.Security.Claims
+@model IEnumerable<FlickrClone.Models.Image>
 
 <h2>Here is your list of images, @User.Identity.Name</h2>
 <hr />
+
+@if (Model.Any())
+{
+    <div>
+        @foreach (var listImage in Model)
+        {
+            <img src="@listImage.Url" alt="listImage.Description" />
+
+            <p>@Html.DisplayFor(modelImage => listImage.Description)</p>
+        }
+    </div>
+}
+else
+{
+    <p>No images have been added yet!</p>
+}
+
 @Html.ActionLink("Create new", "Create")

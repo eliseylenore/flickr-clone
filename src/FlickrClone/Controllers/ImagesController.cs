@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using FlickrClone.Models;
 using Microsoft.AspNetCore.Identity;
-
+using System.Security.Claims;
 
 namespace FlickrClone.Controllers
 {
@@ -22,9 +22,29 @@ namespace FlickrClone.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            return View(_db.Images.Where(x => x.User.Id == currentUser.Id));
+        }
+
+        public IActionResult Create()
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Image image)
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            image.User = currentUser;
+            _db.Images.Add(image);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        
     }
 }
