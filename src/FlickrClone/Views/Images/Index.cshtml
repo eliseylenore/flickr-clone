@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+
+<h2>Here is your list of images, @User.Identity.Name</h2>
+<hr />
+@Html.ActionLink("Create new", "Create")

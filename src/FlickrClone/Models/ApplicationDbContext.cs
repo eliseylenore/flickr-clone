@@ -13,5 +13,10 @@ namespace FlickrClone.Models
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+        public DbSet<Image> Images { get; set; }
     }
 }
