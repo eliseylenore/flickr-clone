@@ -60,5 +60,19 @@ namespace FlickrClone.Controllers
             return RedirectToAction("Index");
         }
         
+        public IActionResult Delete(int id)
+        {
+            var thisImage = _db.Images.FirstOrDefault(images => images.Id == id);
+            return View(thisImage);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisImage = _db.Images.FirstOrDefault(images => images.Id == id);
+            _db.Images.Remove(thisImage);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

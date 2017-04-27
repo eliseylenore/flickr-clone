@@ -18,7 +18,8 @@
             <p>@Html.DisplayFor(modelImage => listImage.Description)</p>
             
                 @Html.ActionLink("Edit This Image", "Edit", new { id = listImage.Id })
-            }
+                @Html.ActionLink("Delete", "Delete", new { id = listImage.Id })
+        }
 </div>
 }
 else
@@ -27,3 +28,4 @@ else
 }
 
 @Html.ActionLink("Create new", "Create")
+
