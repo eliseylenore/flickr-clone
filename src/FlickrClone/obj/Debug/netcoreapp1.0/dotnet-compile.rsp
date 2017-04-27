@@ -208,4 +208,5 @@ C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427161100_
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Models\ApplicationDbContext.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Models\ApplicationUser.cs
-C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\ViewModel\RegisterViewModel.cs
+C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\ViewModels\RegisterViewModel.cs
