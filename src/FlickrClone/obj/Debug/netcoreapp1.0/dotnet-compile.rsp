@@ -208,6 +208,8 @@ C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427161100_
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427161100_Initial.Designer.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427171832_AddImageTable.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427171832_AddImageTable.Designer.cs
+C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427202044_AddTaggedUsers.cs
+C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\20170427202044_AddTaggedUsers.Designer.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Models\ApplicationDbContext.cs
 C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\Models\ApplicationUser.cs
