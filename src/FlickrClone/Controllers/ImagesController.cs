@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using FlickrClone.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlickrClone.Controllers
 {
@@ -45,6 +46,19 @@ namespace FlickrClone.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Edit(int id)
+        {
+            var thisItem = _db.Images.FirstOrDefault(images => images.Id == id);
+            return View(thisItem);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Image image)
+        {
+            _db.Entry(image).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         
     }
 }

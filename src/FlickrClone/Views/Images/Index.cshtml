@@ -16,8 +16,10 @@
             <img src="@listImage.Url" alt="listImage.Description" />
 
             <p>@Html.DisplayFor(modelImage => listImage.Description)</p>
-        }
-    </div>
+            
+                @Html.ActionLink("Edit This Image", "Edit", new { id = listImage.Id })
+            }
+</div>
 }
 else
 {
